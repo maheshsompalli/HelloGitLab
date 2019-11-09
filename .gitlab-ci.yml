@@ -17,7 +17,7 @@ stages:
 lintDebug:
   stage: build
   script:
-    - ./gradlew -Pci --console=plain :app:lintDevDebug -PbuildDir=lint
+    - ./gradlew -Pci --console=plain lintDevDebug -PbuildDir=lint
 
 assembleDebug:
   stage: build
