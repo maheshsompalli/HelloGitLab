@@ -7,7 +7,6 @@ variables:
   ANDROID_SDK_TOOLS: "4333796"
 
 before_script:
-- pwd
 - export GRADLE_USER_HOME=$(pwd)/.gradle
 - chmod +x ./gradlew
 
@@ -18,6 +17,7 @@ stages:
 lintDebug:
   stage: build
   script:
+    - pwd
     - ./gradlew tasks
     - ./gradlew assemble
     #- ./gradlew -Pci --console=plain lintDevDebug -PbuildDir=lint
@@ -25,6 +25,7 @@ lintDebug:
 assembleDebug:
   stage: build
   script:
+    - pwd
     - ./gradlew tasks --all
     - ./gradlew assembleDebug
   artifacts:
