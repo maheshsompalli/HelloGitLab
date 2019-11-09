@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GitLab</string>
+    <string name="gitlab_txt">GitLab Testing project</string>
 </resources>
